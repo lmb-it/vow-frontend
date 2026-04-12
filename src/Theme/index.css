@@ -1,0 +1,78 @@
+/*@import "tailwindcss";*/
+@import "./style-light.css";
+
+/* Class-based dark mode: activates dark: variants when KitsThemeProvider adds .dark to <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.layout-colorscheme-menu {
+  --logo-color: var(--primary-color);
+  --menu-bg: var(--surface-overlay);
+  --root-menuitem-text-color: var(--primary-color);
+  --menuitem-text-color: var(--text-color);
+  --menuitem-icon-color: var(--primary-color);
+  --menuitem-hover-bg-color: var(--surface-hover);
+  --popup-submenu-item-text-color: var(--text-color);
+  --popup-submenu-item-icon-color: var(--primary-color);
+  --popup-submenu-item-hover-bg-color: var(--surface-hover);
+}
+
+.root {
+  background: var(--surface-ground);
+}
+
+/* VoW branded background wrapper */
+.vow-app-bg {
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.vow-app-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .vow-app-bg,
+.vow-app-bg:where(.dark, .dark *) {
+  background-color: #111827;
+}
+
+/* ── Layout scroll fix ── */
+.layout-container {
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+.layout-content-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100vh !important;
+}
+
+.layout-content {
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+}
+
+.layout-sidebar {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 18rem;
+  background: var(--menu-bg);
+  border-right: var(--sidebar-border);
+  box-shadow: var(--sidebar-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-height-auto {
+  height: 75vh !important;
+  overflow: hidden;
+}
+
+.p-chips-multiple-container {
+  width: 100%;
+}

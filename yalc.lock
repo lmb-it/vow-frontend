@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "@lmb-it/kitsconcerto-web": {
+      "signature": "e13ee110b423499eab0bc4dd4e32e801",
+      "file": true
+    }
+  }
+}

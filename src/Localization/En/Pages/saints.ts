@@ -1,0 +1,17 @@
+export default {
+    addSaint:'Add Saint',
+    dob:'DOB',
+    dob_bc:'DOB BC',
+    restDate:'Resting Date',
+    restDate_bc:'Resting Date BC',
+    feastDay:'Feast Day',
+    birth_location:'Birth Place',
+    resting_location:'Resting Place',
+    send_email:'Send Welcome Email',
+    createSaint:'Create new Saint',
+    resourceUrl:'Resource Url',
+    category:'Category',
+    saintName:'Saint Name',
+    arabicName:'Arabic Name',
+    englishName:'English Name',
+}

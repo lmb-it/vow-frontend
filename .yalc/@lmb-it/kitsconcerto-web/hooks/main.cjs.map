@@ -1,0 +1,1 @@
+{"version":3,"file":"main.cjs","sources":["../../../src/hooks/main.ts"],"sourcesContent":["import {useContext} from \"react\";\nimport {MainContext} from \"../contexts\";\n\nexport const useKitsConcerto = () => useContext(MainContext);\n"],"names":["useContext","MainContext"],"mappings":";;;;;;AAGO,MAAM,eAAA,GAAkB,MAAMA,gBAAA,CAAWC,qBAAW;;;;"}

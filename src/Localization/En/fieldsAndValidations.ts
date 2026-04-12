@@ -1,0 +1,41 @@
+export default {
+    title: 'Title',
+    firstName: 'First Name',
+    firstNameError: 'You must fill your first name',
+    firstNameMinError: 'You must fill valid first name',
+    lastName: 'Last Name',
+    lastNameError: 'You must fill valid last name',
+    lastNameMinError: 'You must fill your last name ',
+
+    birthday: 'Birthday',
+    birthdayMaxError: 'Date shouldn\'t be greater than 31/12/2015',
+    email: 'Email',
+    emailError: 'You must fill your email',
+    emailError2: 'Email is not valid',
+
+    emptyError: 'Please fill all fields',
+    gender: 'Gender ',
+    male: 'Male',
+    female: 'Female',
+    other: 'Other',
+
+    password: 'Password',
+
+    phoneNumber: 'Phone Number',
+    DOB: 'DOB',
+    church: 'Church',
+    country: 'Country',
+    denomination: 'Denomination',
+    linkAuthor: 'Link to Author',
+    role: 'Role',
+    isPriest: 'Is Priest',
+
+    currentPassword: 'Current Password',
+    currentPasswordEmpty: 'you should fill current password',
+    newPassword: 'New Password',
+    newPasswordEmpty: 'you should fill new password',
+    passwordTooShort: 'Password is too short',
+    confirmationNewPassword: 'Confirm Password',
+    passwordNotConfirmed: 'Password is not match',
+    required: 'This field is required',
+};

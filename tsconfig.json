@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "module": "es2022",
+        "moduleResolution": "bundler",
+        "baseUrl": "./",
+        "resolveJsonModule": true,
+        "moduleSuffixes": [".web", ""],
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "skipLibCheck": true,
+        "jsx": "react-jsx",
+        "allowSyntheticDefaultImports": true,
+        "downlevelIteration": true,
+        "paths": {
+            "@lmb-it/kitsconcerto": ["node_modules/@lmb-it/kitsconcerto-web"],
+            "@lmb-it/kitsconcerto/*": ["node_modules/@lmb-it/kitsconcerto-web/*"],
+            "Assets": ["src/Assets"],
+            "Assets/*": ["src/Assets/*"],
+            "Modules": ["src/Modules"],
+            "Modules/*": ["src/Modules/*"],
+            "Pages": ["src/Pages"],
+            "Pages/*": ["src/Pages/*"],
+            "Routes": ["src/Routes"],
+            "Routes/*": ["src/Routes/*"],
+            "Hooks": ["src/Hooks"],
+            "Hooks/*": ["src/Hooks/*"],
+            "Tools": ["src/Tools"],
+            "Tools/*": ["src/Tools/*"],
+            "Localization": ["src/Localization"],
+            "Localization/*": ["src/Localization/*"],
+            "Services": ["src/Services"],
+            "Services/*": ["src/Services/*"],
+            "Redux": ["src/Redux"],
+            "Redux/*": ["src/Redux/*"],
+            "Types": ["src/Types"],
+            "Types/*": ["src/Types/*"],
+            "Components": ["src/Components"],
+            "Components/*": ["src/Components/*"]
+        }
+    }
+}

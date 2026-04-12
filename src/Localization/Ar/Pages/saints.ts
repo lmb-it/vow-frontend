@@ -1,0 +1,17 @@
+export default {
+    addSaint: 'إضافة قديس',
+    dob: 'تاريخ الميلاد',
+    dob_bc: 'تاريخ الميلاد قبل الميلاد',
+    restDate: 'تاريخ الوفاة',
+    restDate_bc: 'تاريخ الوفاة قبل الميلاد',
+    feastDay: 'يوم العيد',
+    birth_location: 'مكان الميلاد',
+    resting_location: 'مكان الرقود',
+    send_email: 'إرسال بريد ترحيبي',
+    createSaint: 'إضافة قديس جديد',
+    resourceUrl: 'رابط المورد',
+    category: 'الفئة',
+    saintName: 'اسم القديس',
+    arabicName: 'الاسم بالعربية',
+    englishName: 'الاسم بالإنجليزية',
+};

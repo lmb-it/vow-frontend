@@ -1,0 +1,1 @@
+{"version":3,"file":"locale.cjs","sources":["../../../src/hooks/locale.ts"],"sourcesContent":["import {useContext} from \"react\";\nimport {LocaleContext} from \"../contexts/Locale\";\n\nexport const useLanguage = () => useContext(LocaleContext);\n"],"names":["useContext","LocaleContext"],"mappings":";;;;;AAGO,MAAM,WAAA,GAAc,MAAMA,gBAAA,CAAWC,uBAAa;;;;"}

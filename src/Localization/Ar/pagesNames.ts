@@ -1,0 +1,16 @@
+export default {
+  myFavorites: 'المفضلة',
+  profile: 'حسابي',
+  forgetPassword: 'نسيت كلمة السر',
+  mainMenu: 'الرئيسية',
+  followUs: 'متابعة',
+  code: 'OTP',
+  cart: 'عربتي',
+  myAccount: 'حسابي',
+  changePassword: 'تغيير كلمة المرور',
+  categories: 'التصنيفات',
+  specialForYou: 'فقط لأجلك',
+  hotProducts: 'الأكثر مبيعا',
+  ourStory: 'من نحن',
+  aboutUs: 'من نحن',
+};

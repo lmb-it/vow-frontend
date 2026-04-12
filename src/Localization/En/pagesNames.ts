@@ -1,0 +1,16 @@
+export default {
+  myFavorites: 'Favorites',
+  profile: 'My Profile',
+  forgetPassword: 'Forget Password',
+  mainMenu: 'Main Menu',
+  followUs: 'Follow Us',
+  code: 'OTP',
+  cart: 'My Cart',
+  myAccount: 'My Account',
+  changePassword: 'Change Password',
+  categories: 'Categories',
+  specialForYou: 'Special For You',
+  hotProducts: 'Hot Products',
+  ourStory: 'Our Story',
+  aboutUs: 'About Us',
+};

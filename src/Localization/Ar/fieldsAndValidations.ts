@@ -1,0 +1,41 @@
+export default {
+  title:'اللقب',
+  firstName: 'الاسم الاول ',
+  firstNameError: 'يرجى كتابة الأسم الاول ',
+  firstNameMinError: 'يرجى كتابة الأسم الاول بشكل صحيح ',
+  lastName: 'اسم العائلة ',
+  lastNameError: 'يرجى كتابة اسم العائلة ',
+  lastNameMinError: 'يرجى كتابة اسم العائلة بشكل صحيح ',
+
+  birthday: 'تاريخ الميلاد ',
+  birthdayMaxError: 'تاريخ الميلاد يجب ان يكون اصفر من 31/12/2015',
+  email: 'البريد الاليكتروني ',
+  emailError: 'يرجى كتابة البريد الاليكتروني ',
+  emailError2: 'البريد الاليكتروني غير صالح ',
+
+  emptyError: 'يرجى ملئ جميع الحقول ',
+  gender: 'الجنس ',
+  male: 'ذكر',
+  female: 'أنثى',
+  other: 'غير ذلك',
+
+  password: 'كلمة السر',
+
+  phoneNumber: 'رقم الهاتف',
+  DOB: 'تاريخ الميلاد',
+  church: 'الكنيسة',
+  country: 'الدولة',
+  denomination: 'العقيدة',
+  linkAuthor: 'ربط إلى المؤلف',
+  role: 'الدور',
+  isPriest: 'هل هو كاهن',
+
+  currentPassword: 'كلمة المرور الحالية',
+  currentPasswordEmpty: 'يجب ملئ كلمة المرور الحالية',
+  newPassword: 'كلمة المرور الجديدة',
+  newPasswordEmpty: 'يجب ملئ كلمة المرور الجديدة',
+  passwordTooShort: 'كلمة المرور قصيرة جدا"',
+  confirmationNewPassword: 'تأكيد كلمة المرور الجديدة',
+  passwordNotConfirmed: 'كلمة المرور غير متطابقة',
+  required: 'هذا الحقل مطلوب',
+};
