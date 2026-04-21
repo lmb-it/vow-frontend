@@ -1,4 +1,4 @@
-import { jsx, jsxs } from 'react/jsx-runtime';
+import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
 import { useMemo, isValidElement } from 'react';
 import { useKitsTheme } from '../../../contexts/Theme/KitsThemeProvider.web.js';
 import Text from '../../../primitives/Text/index.web.js';
@@ -50,16 +50,23 @@ const Label = ({ as = "label", className, label, elementId, required, style }) =
     return classes.join(" ");
   }, [isRTL]);
   const asterisk = required ? /* @__PURE__ */ jsx("span", { style: { color: resolveToken("danger"), marginInlineStart: 2 }, children: "*" }) : null;
+  if (!label) return null;
+  if (isValidElement(renderLabel)) {
+    return /* @__PURE__ */ jsxs(Fragment, { children: [
+      renderLabel,
+      asterisk
+    ] });
+  }
   if (["p", "span", "small", "label"].includes(as)) {
-    return !!label ? /* @__PURE__ */ jsxs(Text, { as, className: labelState, htmlFor: elementId, style, children: [
+    return /* @__PURE__ */ jsxs(Text, { as, className: labelState, htmlFor: elementId, style, children: [
       renderLabel,
       asterisk
-    ] }) : null;
+    ] });
   } else {
-    return !!label ? /* @__PURE__ */ jsxs(Heading, { as, className: labelState, htmlFor: elementId, style, children: [
+    return /* @__PURE__ */ jsxs(Heading, { as, className: labelState, htmlFor: elementId, style, children: [
       renderLabel,
       asterisk
-    ] }) : null;
+    ] });
   }
 };
 

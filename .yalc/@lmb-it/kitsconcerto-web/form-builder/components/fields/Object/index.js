@@ -1,9 +1,8 @@
-import { jsx, jsxs } from 'react/jsx-runtime';
+import { jsx } from 'react/jsx-runtime';
 import { useMemo } from 'react';
+import KitsContainer from '../../../../form/helpers/FormContainer/index.web.js';
 import { FormRenderer } from '../../FormRenderer/index.web.js';
 import Flex from '../../../../layout/Flex/index.js';
-import Label from '../../../../form/helpers/Label/label.web.js';
-import Text from '../../../../primitives/Text/index.web.js';
 
 const ObjectElement = ({
   element,
@@ -14,7 +13,7 @@ const ObjectElement = ({
   setFocusedField,
   fieldLogic
 }) => {
-  const { isShown, label, elements, helperText, style: elementStyle } = fieldLogic;
+  const { isShown, label, elements, helperText, style: elementStyle, fieldState, hideError, isRequired, slots } = fieldLogic;
   const objectElement = element;
   const { grid } = objectElement;
   const renderer = useMemo(() => {
@@ -38,11 +37,22 @@ const ObjectElement = ({
   if (!isShown) {
     return null;
   }
-  return /* @__PURE__ */ jsxs(Flex, { id: element.id.toString(), w: "full", flexDirection: "column", gap: 10, ...elementStyle?.container || {}, children: [
-    label && /* @__PURE__ */ jsx(Label, { as: "h2", label, elementId: element.id }),
-    helperText && typeof helperText != "function" && /* @__PURE__ */ jsx(Text, { fontSize: 10, as: "small", children: helperText }),
-    renderer
-  ] });
+  return /* @__PURE__ */ jsx(
+    KitsContainer,
+    {
+      id: element.id.toString(),
+      label,
+      helperText,
+      errors: fieldState?.error?.message,
+      invalid: fieldState?.invalid,
+      hideError,
+      required: isRequired,
+      bare: true,
+      containerStyle: elementStyle?.container,
+      elementStyles: slots,
+      children: /* @__PURE__ */ jsx(Flex, { w: "full", flexDirection: "column", gap: 6, children: renderer })
+    }
+  );
 };
 
 export { ObjectElement, ObjectElement as default };

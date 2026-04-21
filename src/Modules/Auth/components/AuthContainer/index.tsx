@@ -100,7 +100,7 @@ const AuthContainer = (props: { children: React.ReactNode }) => {
                         }}
                     >
                         <Text
-                            as={'h1'}
+                            as={'p'}
                             fontSize={{
                                 lg: '28px',
                                 md: '22px',
@@ -113,7 +113,7 @@ const AuthContainer = (props: { children: React.ReactNode }) => {
                             Voice Of Wisdom
                         </Text>
                         <Text
-                            as={'h3'}
+                            as={'p'}
                             fontSize={{
                                 lg: '14px',
                                 md: '12px',

@@ -41,9 +41,7 @@ const Login = () => {
                 onSubmit={onLogin}
                 submitButtonProps={{
                     isLoadingText: 'Logging In',
-                    title: 'login',
-                    borderColor: 'white',
-                    fontColor: 'white',
+                    label: 'login',
                     severity: 'info',
                 }}
             >

@@ -4,10 +4,9 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var jsxRuntime = require('react/jsx-runtime');
 var React = require('react');
+var index_web$1 = require('../../../../form/helpers/FormContainer/index.web.cjs');
 var index_web = require('../../FormRenderer/index.web.cjs');
 var index = require('../../../../layout/Flex/index.cjs');
-var label_web = require('../../../../form/helpers/Label/label.web.cjs');
-var index_web$1 = require('../../../../primitives/Text/index.web.cjs');
 
 const ObjectElement = ({
   element,
@@ -18,7 +17,7 @@ const ObjectElement = ({
   setFocusedField,
   fieldLogic
 }) => {
-  const { isShown, label, elements, helperText, style: elementStyle } = fieldLogic;
+  const { isShown, label, elements, helperText, style: elementStyle, fieldState, hideError, isRequired, slots } = fieldLogic;
   const objectElement = element;
   const { grid } = objectElement;
   const renderer = React.useMemo(() => {
@@ -42,11 +41,22 @@ const ObjectElement = ({
   if (!isShown) {
     return null;
   }
-  return /* @__PURE__ */ jsxRuntime.jsxs(index.default, { id: element.id.toString(), w: "full", flexDirection: "column", gap: 10, ...elementStyle?.container || {}, children: [
-    label && /* @__PURE__ */ jsxRuntime.jsx(label_web.default, { as: "h2", label, elementId: element.id }),
-    helperText && typeof helperText != "function" && /* @__PURE__ */ jsxRuntime.jsx(index_web$1.default, { fontSize: 10, as: "small", children: helperText }),
-    renderer
-  ] });
+  return /* @__PURE__ */ jsxRuntime.jsx(
+    index_web$1.default,
+    {
+      id: element.id.toString(),
+      label,
+      helperText,
+      errors: fieldState?.error?.message,
+      invalid: fieldState?.invalid,
+      hideError,
+      required: isRequired,
+      bare: true,
+      containerStyle: elementStyle?.container,
+      elementStyles: slots,
+      children: /* @__PURE__ */ jsxRuntime.jsx(index.default, { w: "full", flexDirection: "column", gap: 6, children: renderer })
+    }
+  );
 };
 
 exports.ObjectElement = ObjectElement;

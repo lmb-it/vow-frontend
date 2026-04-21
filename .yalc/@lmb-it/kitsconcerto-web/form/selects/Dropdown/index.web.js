@@ -44,7 +44,7 @@ const KitsDropdown = ({ className, ref, ...rawProps }) => {
     Dropdown,
     {
       emptyFilterMessage,
-      value: selectedValue ? selectedValue.toString() : selectedValue,
+      value: selectedValue,
       placeholder,
       options: Array.isArray(list) ? list : [],
       disabled,

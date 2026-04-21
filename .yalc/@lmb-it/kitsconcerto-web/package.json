@@ -1,6 +1,6 @@
 {
   "name": "@lmb-it/kitsconcerto-web",
-  "version": "0.1.275",
+  "version": "0.1.157",
   "description": "KitsConcerto — Web (React) UI components",
   "main": "index.web.cjs",
   "module": "index.web.js",
@@ -62,5 +62,5 @@
     "type": "git",
     "url": "https://github.com/lmb-it/kitsconcerto.git"
   },
-  "yalcSig": "e13ee110b423499eab0bc4dd4e32e801"
+  "yalcSig": "fc6337b981eed561c3b31696bc3f0848"
 }

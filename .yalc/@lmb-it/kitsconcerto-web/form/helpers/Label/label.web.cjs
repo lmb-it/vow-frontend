@@ -54,16 +54,23 @@ const Label = ({ as = "label", className, label, elementId, required, style }) =
     return classes.join(" ");
   }, [isRTL]);
   const asterisk = required ? /* @__PURE__ */ jsxRuntime.jsx("span", { style: { color: resolveToken("danger"), marginInlineStart: 2 }, children: "*" }) : null;
+  if (!label) return null;
+  if (React.isValidElement(renderLabel)) {
+    return /* @__PURE__ */ jsxRuntime.jsxs(jsxRuntime.Fragment, { children: [
+      renderLabel,
+      asterisk
+    ] });
+  }
   if (["p", "span", "small", "label"].includes(as)) {
-    return !!label ? /* @__PURE__ */ jsxRuntime.jsxs(index_web.default, { as, className: labelState, htmlFor: elementId, style, children: [
+    return /* @__PURE__ */ jsxRuntime.jsxs(index_web.default, { as, className: labelState, htmlFor: elementId, style, children: [
       renderLabel,
       asterisk
-    ] }) : null;
+    ] });
   } else {
-    return !!label ? /* @__PURE__ */ jsxRuntime.jsxs(index_web$1.default, { as, className: labelState, htmlFor: elementId, style, children: [
+    return /* @__PURE__ */ jsxRuntime.jsxs(index_web$1.default, { as, className: labelState, htmlFor: elementId, style, children: [
       renderLabel,
       asterisk
-    ] }) : null;
+    ] });
   }
 };
 

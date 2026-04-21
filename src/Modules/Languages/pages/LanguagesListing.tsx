@@ -59,7 +59,7 @@ const LanguagesListing = () => {
             ),
         },
         {
-            name: 'actions',
+            name: 'actions' as any,
             label: '',
             body: (_value: any, row: ILanguage) => (
                 <Flex gap={4}>

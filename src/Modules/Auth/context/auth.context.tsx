@@ -43,7 +43,7 @@ export const AuthProvider: FunctionComponent<PropsWithChildren> = ({children}) =
 
     const onLogin = (
         data: ILoginForm,
-        setIsSubmitting: Dispatch<SetStateAction<boolean>>,
+        setIsSubmitting: (isSubmitting: boolean) => void,
     ) => {
         setIsSubmitting(true);
         dispatch(getAuth({...data}));

@@ -41,7 +41,7 @@ export interface IAuthState {
 export interface AuthContextValues {
     formRef: MutableRefObject<IUseFormReturn<any> | null>;
     onLogOut(): void;
-    onLogin(data: ILoginForm, setIsSubmitting: Dispatch<SetStateAction<boolean>>): void;
+    onLogin(data: ILoginForm, setIsSubmitting: (isSubmitting: boolean) => void): void;
     refreshAuth(): void;
     isLoading: boolean;
     isLoggedIn?: boolean;
