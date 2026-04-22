@@ -4,6 +4,35 @@
 /* Class-based dark mode: activates dark: variants when KitsThemeProvider adds .dark to <html> */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ──────────────────────────────────────────────────────────────
+   Typography — Google Fonts pairing
+   LTR: Cormorant Garamond (display) + Inter (body)
+   RTL: Amiri (display) + Cairo (body)
+   Switches automatically based on the [dir] attribute set by the
+   language provider.
+   ────────────────────────────────────────────────────────────── */
+:root {
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root[dir='rtl'],
+[dir='rtl'] {
+  --font-display: 'Amiri', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Cairo', 'Inter', 'Segoe UI', Tahoma, sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-body);
+}
+
+.font-display,
+.vow-heading {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
 .layout-colorscheme-menu {
   --logo-color: var(--primary-color);
   --menu-bg: var(--surface-overlay);
@@ -23,8 +52,22 @@
 /* VoW branded background wrapper */
 .vow-app-bg {
   min-height: 100vh;
-  background-color: #FFFFFF;
+  background-color: #F7F1E8;
+  background-image: url('../App/assets/img.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
+}
+
+.vow-app-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(247, 241, 232, 0.55);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .vow-app-bg > * {
@@ -34,7 +77,19 @@
 
 .dark .vow-app-bg,
 .vow-app-bg:where(.dark, .dark *) {
-  background-color: #111827;
+  background-color: #1a1410;
+}
+
+.dark .vow-app-bg::before,
+.vow-app-bg:where(.dark, .dark *)::before {
+  background: rgba(26, 20, 16, 0.7);
+}
+
+/* Make layout surfaces translucent so the branded background shows through */
+.vow-app-bg .layout-container,
+.vow-app-bg .layout-content-wrapper,
+.vow-app-bg .layout-content {
+  background: transparent !important;
 }
 
 /* ── Layout scroll fix ── */

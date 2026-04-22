@@ -19,7 +19,11 @@ axios.interceptors.response.use(
 
 axios.interceptors.request.use(
     async config => {
-        const jwt = auth().token;
+        // Prefer localStorage: it's written immediately after /login,
+        // whereas Redux state is only updated after /me succeeds — so
+        // the /me request itself fires before Redux has the token.
+        // Also survives page refresh before redux-persist rehydrates.
+        const jwt = localStorage.getItem('token') || auth().token;
         config.baseURL = getEnv('VITE_API_URL');
         if (jwt) {
             config.headers.Authorization = `Bearer ${jwt}`;

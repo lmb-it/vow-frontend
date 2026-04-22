@@ -1,16 +1,16 @@
 export default {
     categories: {
-        table:   'admin/category/table',
-        store:   'admin/category',
-        show:    'admin/category/:ref',
-        update:  'admin/category/:ref',
-        destroy: 'admin/category/:ref',
+        table:   'category/table',
+        store:   'category',
+        show:    'category/:ref',
+        update:  'category/:ref',
+        destroy: 'category/:ref',
     },
     hashtags: {
-        table:   'admin/hashtag/table',
-        store:   'admin/hashtag',
-        show:    'admin/hashtag/:name',
-        update:  'admin/hashtag/:name',
-        destroy: 'admin/hashtag/:name',
+        table:   'hashtag/table',
+        store:   'hashtag',
+        show:    'hashtag/:name',
+        update:  'hashtag/:name',
+        destroy: 'hashtag/:name',
     },
 };

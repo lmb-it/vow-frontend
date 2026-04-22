@@ -8,6 +8,9 @@ const VOW_ROOT = resolve(FRONTEND_ROOT, "../");
 
 export default defineConfig({
     plugins: [tailwindcss(), react()],
+    // Env files live one level up, shared between frontend builds.
+    // Vite still only exposes VITE_* keys to client code.
+    envDir: resolve(FRONTEND_ROOT, '../env'),
     define: {
         'process.env': {}
     },

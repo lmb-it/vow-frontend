@@ -1,8 +1,8 @@
 export default {
-    table:      'admin/language/table',
-    store:      'admin/language',
-    show:       'admin/language/:ref',
-    update:     'admin/language/:ref',
-    destroy:    'admin/language/:ref/:delete',
-    deactivate: 'admin/language/:ref/:activate',
+    table:      'language/table',
+    store:      'language',
+    show:       'language/:ref',
+    update:     'language/:ref',
+    destroy:    'language/:ref/:delete',
+    deactivate: 'language/:ref/:activate',
 };

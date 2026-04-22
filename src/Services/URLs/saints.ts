@@ -1,17 +1,17 @@
 export default {
     saints: {
-        table:             'admin/saint/table',
-        store:             'admin/saint',
-        show:              'admin/saint/:ref',
-        update:            'admin/saint/:ref',
-        destroy:           'admin/saint/:ref',
-        detachDenomination:'admin/saint/:ref/denomination/:denominationRef',
+        table:             'saint/table',
+        store:             'saint',
+        show:              'saint/:ref',
+        update:            'saint/:ref',
+        destroy:           'saint/:ref',
+        detachDenomination:'saint/:ref/denomination/:denominationRef',
     },
     saintsCategories: {
-        table:   'admin/saint-category/table',
-        store:   'admin/saint-category',
-        show:    'admin/saint-category/:ref',
-        update:  'admin/saint-category/:ref',
-        destroy: 'admin/saint-category/:ref',
+        table:   'saint-category/table',
+        store:   'saint-category',
+        show:    'saint-category/:ref',
+        update:  'saint-category/:ref',
+        destroy: 'saint-category/:ref',
     },
 };

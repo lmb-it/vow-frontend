@@ -20,6 +20,12 @@ function* onLoadAuth(action: PayloadAction<ILoginForm>) {
                         token,
                     },
                 }));
+            } else {
+                // `me` failed after successful login — drop token and surface the error
+                localStorage.removeItem('token');
+                yield put(disableLoading());
+                yield* handleApiResponse(meData);
+                return;
             }
         } else {
             yield put(disableLoading());

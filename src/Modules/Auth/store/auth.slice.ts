@@ -46,6 +46,7 @@ const authSlice = createSlice({
                 ...user,
                 token: user.token || state.user.token,
             };
+            state.isLoading = false;
         },
         getAuth: (state, action: PayloadAction<ILoginForm>) => {
             state.isLoading = true;
